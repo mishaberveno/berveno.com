@@ -110,7 +110,7 @@
 ======= */
 
 body {
-    background-color: #0E0E0E;
+    background-color: #EEE9DC;
 }
 
 @font-face {
@@ -131,8 +131,7 @@ h2 {
     font-family: Pitch-regular;
     font-size: 1.4rem;
     font-weight: normal;
-    font-style: normal;
-    color: #EEE;
+    color: #0E0E0E;
     margin-top: -15px;
 }
 
@@ -141,7 +140,7 @@ h3 {
     font-size: 1.4rem;
     font-weight: normal;
     font-style: normal;
-    color: #EEE;
+    color: #0E0E0E;
 }
 
 h4 {
@@ -149,10 +148,7 @@ h4 {
     font-size: 1.2rem;
     font-weight: normal;
     font-style: bold;
-    color: #EEE;
-}
-
-.portfolio h4 {
+    color: #0E0E0E;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -162,25 +158,17 @@ p {
     font-size: 1rem
     font-weight: normal;
     line-height: 1.4rem;
-    color: #EEE;
+    color: #0E0E0E;
 }
 
 .logo {
-    max-width: 300px;
-    margin: 50px 0 25px;
-}
-
-.portfolio .logo {
     max-width: 239px;
+    margin: 50px 0 25px;
 }
 
 .photo {
     margin-top: 21px;
     width: 125px;
-}
-
-.month {
-    margin-top: 16px;
 }
 
 .text {
@@ -193,25 +181,13 @@ p {
 }
 
 a { 
-    color: #EEE;
+    color: #0E0E0E;
     text-decoration: underline;
 }
 
 a:hover {
     text-decoration: none;
 }
-
-body.portfolio {
-    background-color: #F8F2ED;
-}
-
-.portfolio h2, .portfolio h3, .portfolio h4, .portfolio p, .portfolio a {
-    color: #0E0E0E;
- }
-
- #footer {
-    color: #252525;
- }
 
 @media (min-width: 768px) {
     .main {
