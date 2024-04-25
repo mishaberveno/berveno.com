@@ -193,6 +193,10 @@ a:hover {
   scroll-margin-top: 100px;
 }
 
+.footer {
+    color: #E2DDCF;
+}
+
 @media (min-width: 768px) {
     .main {
         display: inline-block;
