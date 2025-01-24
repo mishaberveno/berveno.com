@@ -1,0 +1,39 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main # Change this to your default branch if it's not `main`
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Install dependencies (Node.js environment)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Install a sitemap generator (e.g., `sitemap-generator-cli`)
+      - name: Install Sitemap Generator
+        run: npm install -g sitemap-generator-cli
+
+      # Generate the sitemap
+      - name: Generate Sitemap
+        run: |
+          sitemap-generator https://berveno.com -o ./sitemap.xml
+
+      # Commit and push the sitemap to the repository
+      - name: Commit and Push Sitemap
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "Auto-generated sitemap"
+          git push
