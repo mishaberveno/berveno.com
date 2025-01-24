@@ -31,6 +31,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           echo "${{ secrets.SSH_GENERATE_SITEMAP }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          git config --global url."git@github.com:".insteadOf "https://github.com/"
         env:
           GITHUB_SSH_PRIVATE_KEY: ${{ secrets.SSH_GENERATE_SITEMAP }}  # Add your private key to GitHub secrets
 
