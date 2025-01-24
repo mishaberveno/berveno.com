@@ -3,7 +3,7 @@ name: Generate Sitemap
 on:
   push:
     branches:
-      - main # Change this to your default branch if it's not `main`
+      - main  # Adjust this if you are using a different branch (e.g., 'master')
 
 jobs:
   generate-sitemap:
@@ -11,30 +11,22 @@ jobs:
 
     steps:
       # Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      # Install dependencies (Node.js environment)
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      # Install a sitemap generator (e.g., `sitemap-generator-cli`)
-      - name: Install Sitemap Generator
-        run: npm install -g sitemap-generator-cli
-
-      # Generate the sitemap
+      # Install and generate the sitemap (using sitemap-generator-cli as an example)
       - name: Generate Sitemap
         run: |
-          sitemap-generator https://berveno.com -o ./sitemap.xml
+          npm install -g sitemap-generator-cli  # Install the sitemap generator
+          sitemap-generator https://berveno.com -o sitemap.xml  # Replace with your site URL
 
-      # Commit and push the sitemap to the repository
-      - name: Push Sitemap
+      # Commit and push the generated sitemap to the repo
+      - name: Commit and Push the Sitemap
         run: |
-          git config user.name "GitHub App"
-          git config user.email "app@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.APP_TOKEN }}@github.com/${{ github.repository }}.git
-          git add sitemap.xml
-          git commit -m "Auto-generated sitemap"
-          git push origin main
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+          git add sitemap.xml  # Add the generated sitemap to the git index
+          git commit -m "auto-generated sitemap"  # Commit the change
+          git push https://github.com/${{ github.repository }}.git HEAD:main  # Push to the main branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the default GitHub token to authenticate
