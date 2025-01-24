@@ -30,10 +30,11 @@ jobs:
           sitemap-generator https://berveno.com -o ./sitemap.xml
 
       # Commit and push the sitemap to the repository
-      - name: Commit and Push Sitemap
+      - name: Push Sitemap
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub App"
+          git config user.email "app@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.app_token }}@github.com/OWNER/REPO.git
           git add sitemap.xml
           git commit -m "Auto-generated sitemap"
-          git push
+          git push origin main
