@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "GitHub App"
           git config user.email "app@github.com"
-          git remote set-url origin https://x-access-token:${{ APP_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${{ secrets.APP_TOKEN }}@github.com/${{ github.repository }}.git
           git add sitemap.xml
           git commit -m "Auto-generated sitemap"
           git push origin main
