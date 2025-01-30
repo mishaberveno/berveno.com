@@ -118,53 +118,57 @@ body {
 }
 
 @font-face {
-   font-family: 'Pitch-regular';
-   src: url('/assets/fonts/pitch-regular.woff2') format('woff2');
-   font-weight: normal;
-   font-style: normal;
+    font-family: 'Pitch';
+    src: url('/assets/fonts/pitch-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
  
 @font-face {
-   font-family: 'Pitch-bold';
-   src: url('/assets/fonts/pitch-bold.woff2') format('woff2');
-   font-weight: normal;
-   font-style: bold;
+    font-family: 'Pitch';
+    src: url('/assets/fonts/pitch-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
 }
 
 h1 {
-  all: unset;
-  display: inline;
+    all: unset;
+    display: inline;
 }
 
 h2 {
-    font-family: Pitch-regular;
+    font-family: Pitch;
     font-size: 1.2rem;
     font-weight: normal;
+    font-style: normal;
     color: #0E0E0E;
     margin-top: -10px;
     margin-bottom: 30px;
 }
 
 h3 {
-    font-family: Pitch-regular;
+    font-family: Pitch;
     font-size: 1.2rem;
     font-weight: normal;
+    font-style: normal;
     color: #0E0E0E;
 }
 
 h4 {
-    font-family: Pitch-bold;
+    font-family: Pitch;
     font-size: 1.2rem;
-    font-weight: normal;
+    font-weight: bold;
+    font-style: normal;
     color: #0E0E0E;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 p {
-    font-family: Pitch-regular;
-    font-size: 1rem
+    font-family: Pitch;
+    font-size: 1rem;
     font-weight: normal;
+    font-style: normal;
     line-height: 1.4rem;
     color: #0E0E0E;
 }
@@ -205,7 +209,7 @@ a:hover {
 }
 
 #verbal-identity, #copywriting, #editing, #advertising, #scriptwriting {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 .footer {
