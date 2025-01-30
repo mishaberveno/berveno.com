@@ -212,6 +212,11 @@ a:hover {
     color: #C2BEB0;
 }
 
+.footer-image {
+    max-width: 20px;
+    margin-top: 17px;
+}
+
 @media (min-width: 768px) {
     .main {
         display: inline-block;
