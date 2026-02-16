@@ -109,9 +109,6 @@
     }
 }
 
-/* WEBSITE
-======= */
-
 body {
     background-color: #EEE9DC;
 }
@@ -201,10 +198,12 @@ p {
 a { 
     color: #0E0E0E;
     text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: text-decoration-color 300ms;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration-color: transparent;
 }
 
 #verbal-identity, #copywriting, #editing, #advertising, #scriptwriting {
