@@ -90,6 +90,10 @@ input {
     line-height: 1.5rem;
 }
 
+input[type="email"] {
+    width: 18rem;
+}
+
 button[type="submit"] {
     font-family: var(--font-text);
     font-size: 0.9375rem;
