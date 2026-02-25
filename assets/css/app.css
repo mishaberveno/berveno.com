@@ -91,7 +91,7 @@ input {
 }
 
 input[type="email"] {
-    width: 18rem;
+    width: 12rem;
 }
 
 button[type="submit"] {
