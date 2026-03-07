@@ -5,15 +5,17 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preload" href="/assets/fonts/terzaauthor-regular-web.woff2" as="font" type="font/woff2" crossorigin>
+
+    <title>Misha Berveno | Another writer & editor</title>
+    <meta name="description" content="Misha Berveno is a writer and editor working in tech. He’s the founder of No Country Studio, No More Fiction, No Final Form, and other creative projects.">
+
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Berveno" />
     <link rel="manifest" href="/assets/favicons/site.webmanifest" />
-
-    <title>Misha Berveno | Another writer & editor</title>
-    <meta name="description" content="Misha Berveno is a writer and editor working in tech. He’s the founder of No Country Studio, No More Fiction, No Final Form, and other creative projects.">
 
     <meta property="og:type" content="website">
 	<meta property="og:url" content="https://berveno.com"> 
@@ -24,7 +26,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mishaberveno">
     
-	<link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="preload" href="/assets/css/app.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/app.css"></noscript>
+
     <link rel="canonical" href="https://berveno.com">
 
     <script type="application/ld+json">

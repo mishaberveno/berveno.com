@@ -13,9 +13,10 @@
 
 @font-face {
     font-family: 'Terza';
-    src: url('/assets/fonts/TerzaAuthor-Regular-Web.woff2') format('woff2');
+    src: url('/assets/fonts/terzaauthor-regular-web.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
